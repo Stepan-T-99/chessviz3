@@ -1,0 +1,7 @@
+$ cat .gitignore
+/build/*.o
+index.html
+*.[Îŕ]
+*~
+*.swp
+*#
