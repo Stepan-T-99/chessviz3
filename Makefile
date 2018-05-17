@@ -1,5 +1,5 @@
 CFLAGS = -Wall -Werror 
-OBJ = gcc -c $< -o $@ $(CFLAGS)
+OBJ = gcc -I thirdparty -I src -c $< -o $@ $(CFLAGS)
 
 .PHONY: clean
 all:bin build bin/chessviz.exe
@@ -8,10 +8,10 @@ test: bin/chessviz_test.exe
 	$<
 
 bin/chessviz.exe:  build/main.o build/boardprint.o build/board.o build/boardread.o
-	gcc $^ -o $@ $(CFLAGS)
+	gcc -I thirdparty -I src $^ -o $@ $(CFLAGS)
 
 bin/chessviz_test.exe: build/board.o  build/main_test.o
-	gcc $^ -o $@ $(CFLAGS)
+	gcc -I thirdparty -I src $^ -o $@ $(CFLAGS)
 
 
 build/boardprint.o: src/boardprint.c src/boardprint.h
