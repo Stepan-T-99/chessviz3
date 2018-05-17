@@ -1,8 +1,8 @@
 #define CTEST_MAIN
 #include <stdio.h>
-#include "../src/board.h"
+#include <board.h>
 #include "board_test.c"
-#include "../thirdparty/ctest.h"
+#include <ctest.h>
 CTEST(Step_P, Correct) {
     char board[8][8]={{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '},{' ',' ',' ',' ',' ',' ',' ',' '}};
     borders(board,10);
