@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Werror 
+CFLAGS = -Wall -Werror -std=c99
 OBJ = gcc -I thirdparty -I src -c $< -o $@ $(CFLAGS)
 
 .PHONY: clean
